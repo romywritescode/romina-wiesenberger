@@ -1,0 +1,39 @@
+img {
+    width: 100%;
+  }
+  body {
+    background-color: #D9D7E0;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #242424;
+  }
+  a {
+    color: #242424;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #312555;
+    text-decoration: underline;
+  }
+  a:visited { 
+    color: #6550a7;
+  }
+  a:active {
+    color: #165a2a;
+  }
+.view-projects-button {
+  background-color: transparent;
+  color: #242424;
+  border: 2px solid #6550a7;
+}
+.resume-button {
+  background-color: transparent;
+  color: #242424;
+  border: 2px solid #6550a7;
+}
+project 1
+body 
+font-family: 'Inter', sans-serif;
+font-family: 'Nanum Myeongjo', serif;
