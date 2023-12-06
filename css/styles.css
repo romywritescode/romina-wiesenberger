@@ -1,35 +1,75 @@
+/*  color: hsl(44, 55%, 70%); yellow */
+/* color: hsl(349, 20%, 62%); purple */
+/* color: hsl(0, 0%, 17%); black */
+/* color: hsl(0, 0%, 92%); white */
+html{
+  font-size: 62.5%;
+}
 img {
     width: 100%;
   }
   body {
-    background-color: #D9D7E0;
-    font-family: 'Nanum Myeongjo', serif;
-    font-size: 16px;
-    font-weight: 300;
+    background-color: hsl(0, 0%, 92%);
+    font-family: 'open sans', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
     line-height: 1.6;
-    color: #242424;
+    color: hsl(0, 0%, 14%); 
   }
-  a {
-    color: #242424;
-    text-decoration: none;
+  
+  /* headings */
+  h1{
+    font-family: 'poppins', sans-serif;
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 700;
   }
-  a:hover {
-    color: #312555;
-    text-decoration: underline;
+.home-intro {
+    display: block;
+    font-size: 70%;
+    font-weight: 400;
+    margin-block-start: 2rem;
   }
-  a:visited { 
-    color: #6550a7;
-  }
-  a:active {
-    color: #165a2a;
-  }
+h2{
+  font-family: 'poppins', sans-serif;
+  font-size: 5rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+/* button states */
+a:hover {
+  color: hsl(330, 50%, 34%);
+  text-decoration: underline;
+}
+button {
+  color: hsl(330, 50%, 34%);
+  text-decoration: underline;
+}
+
+/* links */
 .view-projects-button {
   background-color: transparent;
   color: #242424;
   border: 2px solid #6550a7;
 }
-.resume-button {
-  background-color: transparent;
-  color: #242424;
-  border: 2px solid #6550a7;
-}
+button{
+    background-color: hsl(349, 20%, 62%);
+    border: none;
+    color:hsl(0, 0%, 17%);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+  }
+  .resume-button{
+     background-color: hsl(349, 20%, 62%);
+    border: none;
+    color:hsl(0, 0%, 17%);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
