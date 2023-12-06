@@ -36,6 +36,12 @@ h2{
   line-height: 1.2;
   font-weight: 700;
 }
+h3{
+  font-family: 'poppins', sans-serif;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
 /* button states */
 a:hover {
   color: hsl(330, 50%, 34%);
