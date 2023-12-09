@@ -42,23 +42,46 @@ h3{
   line-height: 1.2;
   font-weight: 700;
 }
-/* button states */
-a:hover {
-  color: hsl(330, 50%, 34%);
-  text-decoration: underline;
-}
-button {
-  color: hsl(330, 50%, 34%);
-  text-decoration: underline;
-}
 
 /* links */
+a {
+  background-color: hsl(349, 20%, 62%);
+  border: none;
+  color:hsl(0, 0%, 17%);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+a:visited{
+  background-color: hsl(349, 20%, 62%);
+  border: none;
+  color:hsl(0, 0%, 17%);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+a:hover {
+  color: hsl(330, 50%, 34%);
+}
+a:focus{
+  color: hsl(330, 50%, 34%);
+}
+a:active{
+  color: hsl(330, 50%, 34%);
+}
+
+
+/* button */
 .view-projects-button {
   background-color: transparent;
   color: #242424;
   border: 2px solid #6550a7;
 }
-button{
+.button{
     background-color: hsl(349, 20%, 62%);
     border: none;
     color:hsl(0, 0%, 17%);
@@ -67,15 +90,23 @@ button{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-
   }
-  .resume-button{
-     background-color: hsl(349, 20%, 62%);
-    border: none;
-    color:hsl(0, 0%, 17%);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-  }
+.button:visited{
+  background-color: hsl(349, 20%, 62%);
+  border: none;
+  color:hsl(0, 0%, 17%);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.button:hover{
+  color: hsl(330, 50%, 34%);
+}
+.button:focus{
+  color: hsl(330, 50%, 34%);
+}
+.button:active{
+  color: hsl(330, 50%, 34%);
+}
