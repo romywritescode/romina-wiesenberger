@@ -33,6 +33,7 @@ img {
     font-size: 3rem;
     line-height: 1.2;
     font-weight: 700;
+    margin: 0;
   }
 .home-intro {
     display: block;
@@ -74,47 +75,49 @@ a:active{
 
 
 /* button */
-.view-projects-button.button {
-  background-color: transparent;
-  color: #242424;
-  border: 2px solid #6550a7;
-}
-.view-projects-button.button:hover {
-  background-color: #6550a7;
-  color: #FFF;
-  border: 2px solid #6550a7;
-}
-.view-projects-button.button:focus {
-  background-color: #6550a7;
-  color: #FFF;
-  border: 2px solid #6550a7;
-}
-.view-projects-button.button:active {
-  background-color: #6550a7;
-  color: #FFF;
-  border: 2px solid #6550a7;
-}
 .button{
-    background-color: hsl(349, 20%, 62%);
-    border: none;
-    color:hsl(0, 0%, 17%);
+    /*background-color: hsl(349, 20%, 62%);*/
+    background-color: transparent;
+    border: 2px solid #6550a7;
+    color:#242424;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 1.6rem;
+    transition: all 0.3s;
   }
 .button:visited{
   color:hsl(0, 0%, 17%);
 }
 .button:hover{
-  color: hsl(330, 50%, 34%);
+  background-color: #6550a7;
+  color: #FFF;
+  border: 2px solid #6550a7;
 }
 .button:focus{
-  color: hsl(330, 50%, 34%);
+  background-color: #6550a7;
+  color: #FFF;
+  border: 2px solid #6550a7;
 }
 .button:active{
-  color: hsl(330, 50%, 34%);
+  background-color: #6550a7;
+  color: #FFF;
+  border: 2px solid #6550a7;
+}
+.secondary-button .button{
+  background-color:hsl(349, 20%, 62%);
+  border: none;
+  color: #FFF;
+}
+.secondary-button .button:visited{
+  color: #FFF;
+}
+.secondary-button .button:focus, 
+.secondary-button .button:hover,
+.secondary-button .button:active {
+  color:hsl(0, 0%, 17%);
+  background-color:hsl(349, 20%, 82%);
 }
 
 /*index page*/
@@ -156,6 +159,9 @@ nav a:active{
 }
 .container{
   padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 header{
   padding: 1rem 0;
@@ -178,6 +184,11 @@ main{
   flex-direction: column;
   gap: 3rem;
 }
+.row-project-card{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 .social-icon svg{
   height: 2.5em;
   display: flex;
@@ -187,29 +198,7 @@ main{
   display: flex;
   gap: 2rem;
 }
-/* why does the styling of the email-button not work? */
-.button{
-  background-color: transparent;
-  border: none;
-  color:hsl(0, 0%, 17%);
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1.6rem;
-}
-.email-button.button:visited{
-color:hsl(0, 0%, 17%);
-}
-.email-button.button:hover{
-color: hsl(330, 50%, 34%);
-}
-.email-button.button:focus{
-color: hsl(330, 50%, 34%);
-}
-.email-button.button:active{
-color: hsl(330, 50%, 34%);
-}
+
 .copyright{
   display: flex;
   gap: 2rem;
@@ -217,31 +206,17 @@ font-size: 1rem;
 }
 
 /*about page*/
-.resume-button{
-  background-color: hsl(349, 20%, 62%);
-  border: none;
-  color:hsl(0, 0%, 17%);
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1.6rem;
+.about-intro{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
-.resume-button:visited:visited{
-color:hsl(0, 0%, 17%);
-}
-.resume-button:hover{
-color: hsl(330, 50%, 34%);
-}
-.resume-button:focus{
-color: hsl(330, 50%, 34%);
-}
-.resume-button:active{
-color: hsl(330, 50%, 34%);
+.about__content-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-/*project1*/
-/*How do I overlay the heading over the heroe-image?*/
 #project1 .container {
     padding: 0 2rem;
 }
@@ -256,6 +231,9 @@ section{
 }
 .heroe {
 background-image: linear-gradient(90deg, #64224C, #a80150);
+}
+.heroe-nh{
+  background-color: #0f3820;
 }
 .heroe__content-wrapper {
 display: flex;
@@ -295,7 +273,7 @@ fill: #FFF;
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-gap: 0.5remss
+gap: 0.5rem
 }
 .heroe__info-content-titel {
 color: #FFF;
@@ -306,6 +284,22 @@ margin: 0;
 color: #FFF;
 margin: 0;
 }
+.design-process__column{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.heroe-column{
+  display: flex;
+  max-width: 20%;
+}
+.heroe-text{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  color: #FFF;
+}
+
 .design-process__column svg{
   height: 1.5em;
   display: flex;
@@ -324,25 +318,55 @@ margin: 0;
   font-size: 1.0rem;
   padding-inline-start: 15px;
 }
-
 .design-process__banner{
-  background-color:hsl(330, 50%, 60%);
+  background-color:hsl(330, 40%, 70%);
 }
-.list-banner{
-  padding-left: 2rem;
-}
-.illustration-banner{
-max-width: 10rem;
-align-items: center;
-}
-.heading-banner{
+.design-process__banner .container{
   align-items: center;
 }
-.list-banner{
+
+.define__banner, 
+.ideate__banner,
+.test__banner,
+.design__banner,
+.ui-banner{
+  background-color:hsl(330, 40%, 70%);
+}
+.define__banner .container,
+.ideate__banner .container,
+.test__banner .container,
+.design__banner .container,
+.ui-banner .container{
   align-items: center;
 }
-.competitive-analysis__container{
-  padding-top: 5rem;
+
+.illustration-banner,
+.design-banner__illustration,
+.ui__illustration{
+max-width: 16rem;
+}
+.heading-banner,
+.design-banner__illustration,
+.ui__banner{
+  display: flex;
+  align-items: center;
+}
+.list-banner,
+.test__banner,
+.design__banner{
+  text-align: center;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.competitive-analysis__media-wrapper{
+  display: flex;
+}
+.competitor-analysis__container{
+  padding: 5rem 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 .competitive-analysis__icon-wrapper{
   max-width: 20%;
@@ -351,17 +375,32 @@ align-items: center;
  font-size: 1.2rem;
  padding-top: 0.5rem;
 }
-.competitor-analysis__image{
-  max-width: 30%;
+.competitor-analysis-image{
+  max-width: 10rem;
+}
+.competitor-logo__image{
+  max-width: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+.container__column{
+  display: flex;
+  flex-direction: column;
+}
+.container__image{
+  max-width: 5rem;
 }
 .competitor-analysis__image1{
   max-width: 80%;
 }
-/*images dont go bigger or smaller*/
 .user-survey__colum svg{
   height: 1.5em;
   display: flex;
   line-height: 1;
+}
+.competitor-analysis__image{
+  max-width: 30%;
+  display: flex;
 }
 .user-survey__colum{
   display: grid;
@@ -372,7 +411,6 @@ align-items: center;
 .user-survey__colum p {
   margin: 0;
 }
-/*how to put them directly next to each other*/
 .user-survey__image-wrapper h3{
 font-size: 1.6rem;
 margin: 0;
@@ -384,14 +422,17 @@ margin: 0;
   .user-survey__image{
     margin-top: 20px;
   }
-  .define__banner{
-    background-color:hsl(330, 50%, 60%);
-  }
+
   .define-banner li{
     padding-left: 2rem;
   }
+  .content__painpoints{
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+  }
   .define-image{
-  max-width: 10rem;
+  max-width: 16rem;
   align-items: center;
   }
   .define-banner h2{
@@ -420,55 +461,186 @@ margin: 0;
     margin: 0;
   }
   .user-interview__affinity-map{
-    max-width: 50%;
+    max-width: 30rem;
   }
-/*why can I not make the image bigger*/
-.user-persona__image-wrapper{
-  width: 30%;
+  .participant-info__container{
+    display: flex;
+    flex-direction: column;
+  }
+  .interview__participant{
+    font-size: 1.2rem;
+  }
+  .participant-info__image{
+    max-width: 5rem;
+  }
+  .participant-info__container{
+    font-size: 1.0rem;
+  }
+  .problem-statement__image-wrapper,
+  .possible-solution__image-wrapper{
+    display: flex;
+    justify-content: center;
+  }
+.problem-statement__picture,
+.possible-solution__picture{
+  max-width: 15rem;
 }
-.problem-statement__image{
-  max-width: 50%;
+
+.ideate-banner__illustration{
+  max-width: 16rem;
 }
-.possible-solution__image{
-  max-width: 50%;
-}
-.ideate__banner{
-  background-color:hsl(330, 50%, 60%);
-}
-.design__banner{
-  background-color:hsl(330, 50%, 60%);
-}
+
 .login__image{
   max-width: 50%;
   align-items: center;
 }
-/*How to align to center?*/
 .splash__image{
   max-width: 50%;
 }
 .home__image{
   max-width: 50%;
 }
-.test__banner{
-  background-color:hsl(330, 50%, 60%);
-}
 .homepage1__image{
 max-width: 30%;
 }
-
+.user-persona__image{
+max-width: 10rem;
+}
+.user-persona__text-wrapper{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 0.5rem;
+margin-bottom: 2rem;
+}
+.persona__image{
+  max-width:10rem;
+}
+.persona-info__container{
+  display: flex;
+  flex-direction: column;
+  max-width: 	10%;
+}
+.persona-info__text{
+  font-size: 1.0rem;
+}
+.mobile-first__image,
+.mobile-first__picture{
+  max-width: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+.user-flows__image{
+  margin-bottom: 2.5rem;
+}
+.login__image{
+  max-width: 5rem;
+}
+.low-fidelity__content{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  text-align: center;
+}
+.first-ideas-discription__container{
+  width: 30%;
+}
+.first-ideas__heading{
+  font-size: 1.0rem;
+}
+.first-ideas__text{
+  font-size: 0.7rem;
+}
+.low-fi__image{
+  max-width: 10rem;
+}
+.mid__text{
+  font-size: 1.0rem;
+  max-width: 40%;
+}
+.test-banner__illustration{
+  max-width: 16rem;
+}
+.homepage__image{
+  max-width: 12rem;
+}
+.usability-test__change{
+  text-align: center;
+}
+.before__image{
+  max-width: 10rem;
+}
+.after__image{
+  max-width: 10rem;
+}
+.preference-info__container{
+  display: flex;
+  flex-direction: column;
+  width: 3rem;
+}
+.preference__image{
+width: 10rem;
+}
+.preference-chart__image{
+  width: 20rem;
+  display: flex;
+  align-items: center;
+}
 .ui__illustration{
   max-width: 50%;
 }
-.ui__banner{
-background-color:hsl(330, 50%, 60%);
-}
 .ui-kit__image{
   max-width: 80%;
-  align-items: center;
 }
-/*why is there no space to the boarder, How can I center the image?*/
+.ui__image-wrapper{
+  text-align: center;
+}
 .high-fidelity__image{
   max-width: 30%;
 }
-/*How to center the images?*/
-/*I styled the button already, why does it not work?*/
+.high-fidelity__images{
+  text-align: center;
+}
+.usability2__image{
+  width: 10rem;
+}
+.responsive__image{
+  width: 10rem;
+}
+.highfi__image{
+  width: 10rem;
+}
+
+
+@media only screen and (min-width: 640px) {
+}
+@media only screen and (min-width: 1024px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+  body{
+    font-size: 1.8em;
+  }
+}
+@media only screen and (min-width: 1440px) {
+}
+@media only screen and (min-width: 1920px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/*should I add the col-md-6 to every class?*/
+/*where should I add the keyframe?*/
+@keyframes color-change {
+  from {fill: #edc655;}
+  to {fill: #f76414;}
+}
