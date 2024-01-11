@@ -663,37 +663,173 @@ width: 10rem;
 .highfi__image{
   width: 10rem;
 }
-
-
-@media only screen and (min-width: 640px) {
+footer{
+  background-color: rgb(224, 224, 224);
+  padding-block: 5rem;
 }
-@media only screen and (min-width: 1024px) {
-  header {
-    text-align: unset;
-    padding: 20px 0 13px;
-  }
 
-  nav {
-    width: auto;
-    float: right;
-    margin-top: 4px;
+
+@media only screen and (min-width: 767px) {
+  header .container{
+    flex-direction: row;
+    justify-content: space-between;
   }
+  .row-project-card{
+    flex-direction: row;
+  }
+  .row-project-card > *{
+    width: 100%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer .container{
+    align-items: center;
+  }
+  h1{
+    font-size: 3.6rem;
+  }
+  .heroe__icon-wrapper img{
+    max-width: 10rem;
+  }
+  .heroe__icon-wrapper{
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+  .heroe__info-box{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .design-process__container{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .competitor-logo__image{
+    max-width: 15rem;
+  }
+  .participant-info__grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    padding-bottom: 3rem;
+  }
+  .persona-info__container{
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .low-fi__media-wrapper .low-fi__image:not(.desktop){
+    max-width: 17rem;
+  }
+  .low-fi__image-wrapper .low-fi__image{
+    max-width: 49%;
+  }
+  .user-interview__grid{
+      display: grid;
+      grid-auto-rows: 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .user-interview__affinity-map{
+      max-width: 100%;
+    }
+    .low-fidelity__screen{
+      display: grid;
+      grid-auto-rows: 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+    }
+    /* I cant make it them bigger */
+    .preference__wrapper{
+      display: grid;
+      grid-auto-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      width: 30rem;
+    }
+    .preference__image{
+      width: 30rem;
+    }
+    .preference-chart__image{
+      width: 50rem;
+    }
+    .usability2__image{
+      width: 30rem;
+    }
+    .responsive__wrapper{
+      display: grid;
+      grid-auto-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      width: 30rem;
+    }
+    .highfi__image{
+      width: 22rem;
+    }
+    .competitor-analysis__image{
+      max-width: 20%;
+    }
+   h3{
+    font-size: 3rem;
+   }
+   h2{
+    font-size: 5rem;
+   }
+  }
+@media only screen and (min-width: 1024px) {
   body{
     font-size: 1.8em;
   }
-}
-@media only screen and (min-width: 1440px) {
-}
-@media only screen and (min-width: 1920px) {
+  .low-fi__image.desktop{
+max-width: 30rem;
+  } 
+  .mid-fi__image{
+    max-width: 40%;
+  }
+  .mid-fi__wrapper{
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    width: 50rem;
+  }
   .container {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
+#about-picture{
+  width: 100%;
 }
-/*should I add the col-md-6 to every class?*/
-/*where should I add the keyframe?*/
+}
+
 @keyframes color-change {
-  from {fill: #edc655;}
-  to {fill: #f76414;}
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,150px);}
+}
+.cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
