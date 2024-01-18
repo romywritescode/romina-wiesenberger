@@ -5,6 +5,9 @@
 html{
   font-size: 62.5%;
 }
+main {
+  padding-top: 56px;
+}
 img {
     width: 100%;
   }
@@ -55,7 +58,24 @@ h3{
   font-weight: 700;
   margin: 0;
 }
+nav > ul > li {
+  display: inline-block;
+}
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,127,80,0.5);
+}
 
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
 /* links */
 a {
   color:hsl(0, 0%, 17%);
@@ -133,6 +153,10 @@ a:active{
   color: hsl(0, 0%, 100%);
   text-decoration: none;
 }
+.logo{
+max-width: 150px;
+}
+
 nav ul{
   list-style-type: none;
   margin: 0;
@@ -144,6 +168,21 @@ nav a {
   color:hsl(0, 0%, 100%);
   text-decoration: none;
   font-weight: 700;
+}
+nav {
+  display: inline-block;
+  width: 100%;
+}
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1re, 0;
+}
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
 }
 nav a:visited{
   color:hsl(0, 0%, 100%);
@@ -674,6 +713,9 @@ footer{
     flex-direction: row;
     justify-content: space-between;
   }
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
   .row-project-card{
     flex-direction: row;
   }
@@ -739,7 +781,6 @@ footer{
       grid-template-columns: 1fr 1fr 1fr;
       gap: 1.5rem;
     }
-    /* I cant make it them bigger */
     .preference__wrapper{
       display: grid;
       grid-auto-rows: 1fr;
@@ -779,6 +820,9 @@ footer{
 @media only screen and (min-width: 1024px) {
   body{
     font-size: 1.8em;
+  }
+  .navtoggle li:last-child {
+    display: none;
   }
   .low-fi__image.desktop{
 max-width: 30rem;
